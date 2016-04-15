@@ -1,12 +1,7 @@
 <?php
 include "connect.php";
  //selection of database
- $db_select= mysql_select_db(DB_NAME,$connection);
- 
- if(!$db_select)
-   die("cannot select the database".mysql_error());
-
-   if(isset($_POST['name']))
+    if(isset($_POST['name']))
       {
         $name = mysql_escape_string($_POST['name']);
        $sql = sprintf("SELECT image,description FROM images WHERE name ='%s'",
