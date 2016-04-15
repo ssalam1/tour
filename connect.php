@@ -8,4 +8,6 @@ $connection = mysql_connect(HOST,US_NAME,PASS_W);
 mysql_set_charset('UTF-8');
 if(!$connection)
   die("cannot connect to database".mysql_error());
+mysql_select_db("studentadmin", $connection);
+
 ?>
